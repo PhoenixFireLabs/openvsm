@@ -154,7 +154,7 @@ struct VDM_CONFIG
 
 // Target information structure (128 bytes)
 // Now includes 64 byte structure for target specific (derivitive) parameters
-struct VDM_TARGETINFO
+typedef struct VDM_TARGETINFO
 {
 	CHAR id[32];
 	uint64_t regclass;
@@ -164,7 +164,7 @@ struct VDM_TARGETINFO
 	FL64 clock;
 	uint64_t unused[2];
 	uint8_t specific[64];
-};
+}VDM_TARGETINFO;
 
 typedef int64_t VDM_HANDLE;
 typedef void __cdecl VDM_CALLBACK ( VDM_HANDLE, VDM_RESULT );
